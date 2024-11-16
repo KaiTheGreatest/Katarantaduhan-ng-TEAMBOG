@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #D9AB57;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .app {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center; 
+            color: #735B2E;
+            font-family: 'Hanalei Fill', cursive;
+        }
+
+        .logo {
+            display: block;
+            margin: 10px auto;
+            width: 100px;
+        }
+
+        button {
+            background-color: #f7931a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #d87d14;
+        }
+
+        button:active {
+            background-color: #b06210;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h1>Welcome to My Website</h1>
+        <img src="logo.png" alt="Website Logo" class="logo">
+        
+        <div class="buttons">
+            <button onclick="startApp()">START</button>
+            <button onclick="exitApp()">EXIT</button>
+        </div>
+    </div>
+    <script>
+        function startApp() {
+            window.location.href = 'next-page.html'; // Navigate to the new page
+        }
+
+        function exitApp() {
+            if (confirm('Are you sure you want to exit?')) {
+                window.close(); // Attempt to close the window (might not work in all browsers)
+            }
+        }
+    </script>
+</body>
+</html>
